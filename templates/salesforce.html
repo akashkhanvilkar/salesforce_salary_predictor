@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Starter Template - Materialize</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="./static/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Salesforce</a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="#">World's #1 CRM</a></li>
+      </ul>
+
+      <ul id="nav-mobile" class="sidenav">
+        <li><a href="#">World's #1 CRM</a></li>
+      </ul>
+      <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h1 class="header center orange-text">Salesforce Jobs Salary Predictor</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Predict your annual package based upon experience, skills and geographical location
+        <br>
+        </h5>
+      </div>
+
+              <div class="row">
+    <form action='/predict' method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+            <label for="Experience"><b>Total experience (in years)</b></label>
+            <br>
+          <input placeholder="Experience (in years)" name="Experience" id="Experience" type="text" value="0" class="validate">
+        </div>
+        <h6 class="header col s12 light"><b><u>Salesforce Skillset:</u></b>
+        <br>
+        </h6>
+        <div class="input-field col s4">
+
+          <label for="development"><b>Familiarity and experience in Apex Triggers,writing Test Classes, Lightning and LWC (type 1, if true) </b><br></label>
+            <br><br><br>
+          <input id="development" name="development" placeholder="development"  type="text"  value="0" class="validate">
+
+        </div>
+
+        <div class="input-field col s4">
+            <label for="Lead_team"><b>Team Lead in end to end implementation for atleast 2 projetcs (type 1, if true)</b><br></label>
+            <br><br><br>
+          <input id="Lead_team" name="Lead_team" placeholder="Lead_team" type="text"  value="0" class="validate">
+            
+        </div>
+        
+        <div class="input-field col s4">
+        <label for="Functional"><b>Functional experience in creating and testing User Stories, making Reports, giving KTs to clients etc. (type 1, if true)</b></label>
+        <br><br><br>
+          <input placeholder="Functional" name="Functional" id="Functional" type="text"  value="0" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="Business_Interaction"><b>Served as a point of contact between the developers and client during resource gathering, User Story discussions, bugs/enhancements discussions etc. (type 1, if true) </b><br></label>
+            <br><br><br><br><br>
+          <input placeholder="Business_Interaction" name="Business_Interaction" id="Business_Interaction" type="text"  value="0" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="Configuration"><b>Expertise in developing out of the box Salesforce functionalities like Process Builder, Validation Rules, Page Layouts etc. (type 1, if true) </b></label>
+            <br><br><br><br><br>
+          <input placeholder="Configuration" name="Configuration" id="Configuration" type="text"  value="0" class="validate">
+        </div>
+        <h6 class="header col s12 light"><b><u>Job Title:</u></b>
+        <br>
+        </h6>
+        <div class="input-field col s4">
+            <label for="JobTitle_Salesforce Administrator"><b>Salesforce Administrator (type 1, if true)</b></label>
+            <br>
+          <input placeholder="JobTitle_Salesforce Administrator" name="JobTitle_Salesforce Administrator" id="JobTitle_Salesforce Administrator" type="text" value="0" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="JobTitle_Salesforce Business Analyst"><b>Salesforce Business Analyst (type 1, if true)</b></label>
+            <br>
+          <input placeholder="JobTitle_Salesforce Business Analyst" name="JobTitle_Salesforce Business Analyst" id="JobTitle_Salesforce Business Analyst" type="text" value="0" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="JobTitle_Salesforce Developer"><b>Salesforce Developer (type 1, if true)</b></label>
+            <br>
+          <input placeholder="JobTitle_Salesforce Developer" name="JobTitle_Salesforce Developer" id="JobTitle_Salesforce Developer" type="text" value="0" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="JobTitle_Salesforce Technical Architect"><b>Salesforce Technical Architect (type 1, if true)</b></label>
+            <br><br>
+          <input placeholder="JobTitle_Salesforce Technical Architect" name="JobTitle_Salesforce Technical Architect" id="JobTitle_Salesforce Technical Architect" type="text" value="0"  class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="JobTitle_Salesforce Technical/Proect Manager"><b>Salesforce Technical/Proect Manager (type 1, if true)</b></label>
+            <br><br>
+          <input placeholder="JobTitle_Salesforce Technical/Proect Manager" name="JobTitle_Salesforce Technical/Proect Manager" id="JobTitle_Salesforce Technical/Proect Manager" type="text" value="0" class="validate">
+        </div>
+        <h6 class="header col s12 light"><b><u>Location:</u></b>
+        <br>
+        </h6>
+        <div class="input-field col s4">
+            <label for="City_Ahmedabad"><b>Ahmedabad (type 1, if true)</b></label>
+            <br>
+          <input placeholder="City_Ahmedabad" name="City_Ahmedabad" id="City_Ahmedabad" type="text" value="0" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="City_Bengaluru"><b>Bengaluru (type 1, if true)</b></label>
+            <br>
+          <input placeholder="City_Bengaluru" name="City_Bengaluru" id="City_Bengaluru" type="text"  value="0" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="City_Chennai"><b>Chennai (type 1, if true)</b></label>
+            <br>
+          <input placeholder="City_Chennai" name="City_Chennai" id="City_Chennai" type="text"  value="0" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="City_Delhi"><b>Delhi (type 1, if true)</b></label>
+            <br>
+          <input placeholder="City_Delhi" name="City_Delhi" id="City_Delhi" type="text"  value="0" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="City_Gurgaon"><b>Gurgaon (type 1, if true)</b></label>
+            <br>
+          <input placeholder="City_Gurgaon" name="City_Gurgaon" id="City_Gurgaon" type="text"  value="0" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="City_Hyderabad"><b>Hyderabad (type 1, if true)</b></label>
+            <br>
+          <input placeholder="City_Hyderabad" name="City_Hyderabad" id="City_Hyderabad" type="text"  value="0" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="City_Kolkata"><b>Kolkata (type 1, if true)</b></label>
+            <br>
+          <input placeholder="City_Kolkata" name="City_Kolkata" id="City_Kolkata" type="text"  value="0" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="City_Mumbai"><b>Mumbai (type 1, if true)</b></label>
+            <br>
+          <input placeholder="City_Mumbai" name="City_Mumbai" id="City_Mumbai" type="text"  value="0" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="City_Noida"><b>Noida (type 1, if true)</b></label>
+            <br>
+          <input placeholder="City_Noida" name="City_Noida" id="City_Noida" type="text"  value="0" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="City_Pune"><b>Pune (type 1, if true)</b></label>
+            <br>
+          <input placeholder="City_Pune" name="City_Pune" id="City_Pune" type="text"  value="0" class="validate">
+        </div>
+        <div class="input-field col s4">
+            <label for="City_Remote"><b>Remote (type 1, if true)</b></label>
+            <br>
+          <input placeholder="City_Remote" name="City_Remote" id="City_Remote" type="text"  value="0" class="validate">
+        </div>
+
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light orange">Predict Annual Salary</button>
+      </div>
+    </form>
+      </div>
+
+      <br>
+        {{pred}}<br>
+
+    </div>
+  </div>
+
+
+    <br><br>
+  </div>
+  </div>>
+
+  <footer class="page-footer orange">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h8 class="white-text">*Please make sure no field is left blank. They must have a value of either 0 or 1.</h8>
+         
+
+       
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+    
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
